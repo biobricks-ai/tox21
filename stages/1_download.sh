@@ -23,6 +23,6 @@ cd $downloadpath;
 
 cat $temppath/files.txt | xargs -P14 -n1 bash -c '
 echo $1
-wget -r -A ent.gz -nH -q --cut-dirs=7 -nc -P '$downloadpath'/$1 '$ftpbase'$1' {}
+wget -nH -q -nc -P '$downloadpath' '$ftpbase'$1' {}
 
 echo "Download done."
