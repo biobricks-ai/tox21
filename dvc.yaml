@@ -7,3 +7,20 @@ stages:
       - stages/1_download.sh
     outs:
       - download
+      - temp
+  unzip: 
+    cmd: stages/2_unzip.sh
+    deps:
+      - stages/2_unzip.sh
+      - download
+      - temp
+    outs:
+      - raw
+  build: 
+    cmd: stages/3_build.sh
+    deps:
+      - stages/3_build.sh
+      - raw
+      - temp
+    outs:
+      - brick
