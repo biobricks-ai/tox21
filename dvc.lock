@@ -21,3 +21,45 @@ stages:
       md5: a761f80715d2b220c08fb09d426a3728.dir
       size: 1356620732
       nfiles: 80
+    - path: temp
+      md5: 433a967dfccbb7a81e599026134ef0cf.dir
+      size: 2179
+      nfiles: 1
+  unzip:
+    cmd: stages/2_unzip.sh
+    deps:
+    - path: download
+      md5: a761f80715d2b220c08fb09d426a3728.dir
+      size: 1356620732
+      nfiles: 80
+    - path: stages/2_unzip.sh
+      md5: e407d08b772b5317946ad610f43162d6
+      size: 484
+    - path: temp
+      md5: 433a967dfccbb7a81e599026134ef0cf.dir
+      size: 2179
+      nfiles: 1
+    outs:
+    - path: raw
+      md5: 99e6f20ae90bb8aae651b7db6a848930.dir
+      size: 4367690317
+      nfiles: 431
+  build:
+    cmd: stages/3_build.sh
+    deps:
+    - path: raw
+      md5: 99e6f20ae90bb8aae651b7db6a848930.dir
+      size: 4367690317
+      nfiles: 431
+    - path: stages/3_build.sh
+      md5: bbcc98ba45ff168167b31268698e9c6c
+      size: 757
+    - path: temp
+      md5: 433a967dfccbb7a81e599026134ef0cf.dir
+      size: 2179
+      nfiles: 1
+    outs:
+    - path: brick
+      md5: 387b2bab2bbfff7721f75e4e93a55cd5.dir
+      size: 1519656958
+      nfiles: 156
