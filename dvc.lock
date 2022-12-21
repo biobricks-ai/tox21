@@ -60,6 +60,6 @@ stages:
       nfiles: 1
     outs:
     - path: brick
-      md5: 387b2bab2bbfff7721f75e4e93a55cd5.dir
-      size: 1519656958
+      md5: 312a6e3c54e871cfbfc52254d10c4f65.dir
+      size: 1519589157
       nfiles: 156
