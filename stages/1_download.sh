@@ -22,7 +22,13 @@ mkdir -p "$downloadpath"
 cd $downloadpath;
 
 cat $temppath/files.txt | xargs -P14 -n1 bash -c '
-echo $1
-wget -nH -q -nc -P '$downloadpath' '$ftpbase'$1' {}
+# echo $1
+newfilename=$(echo $1 | tr - _)
+echo $newfilename
+echo $newfilename >> '$temppath'/newfiles.txt
+wget -nH -q -nc -P '$downloadpath' '$ftpbase'$1 -O $newfilename' {}
+
+rm $temppath/files.txt
+mv $temppath/newfiles.txt $temppath/files.txt
 
 echo "Download done."

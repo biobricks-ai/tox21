@@ -23,5 +23,5 @@ cat $temppath/files.txt | tail -n +4 | xargs -P14 -n1 bash -c '
   echo '$rawpath'/$filename/$filename.txt
   echo '$brickpath'/$filename.parquet
   python stages/tsv2parquet.py '$rawpath'/$filename/$filename.txt '$brickpath'/$filename.parquet
-  python stages/tsv2parquet.py '$rawpath'/$filename/$filename.aggregrated.txt '$brickpath'/$filename.aggregrated.parquet
+  python stages/tsv2parquet.py '$rawpath'/$filename/$filename.aggregrated.txt '$brickpath'/${filename}_aggregrated.parquet
 ' {}
