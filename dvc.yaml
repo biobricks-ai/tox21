@@ -17,10 +17,12 @@ stages:
     outs:
       - raw
   build: 
-    cmd: stages/3_build.sh
+    cmd: Rscript stages/3_write_brick.R
     deps:
-      - stages/3_build.sh
+      - stages/3_write_brick.R
       - raw
       - temp
     outs:
-      - brick
+      - brick/tox21.parquet
+      - brick/tox21_aggregated.parquet
+      - brick/tox21lib.parquet

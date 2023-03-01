@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Download files
+# Download files to ./download
 
 localpath=$(pwd)
 echo "Local path: $localpath"
@@ -18,6 +18,10 @@ rm index.html
 
 downloadpath="$localpath/download"
 echo "Download path: $downloadpath"
+# delete downloadpath if it exists
+if [ -d "$downloadpath" ]; then
+  rm -rf $downloadpath
+fi
 mkdir -p "$downloadpath"
 cd $downloadpath;
 

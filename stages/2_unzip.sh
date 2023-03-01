@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# unzip files to ./raw
 
 localpath=$(pwd)
 echo "Local path: $localpath"
@@ -11,6 +12,10 @@ mkdir -p $temppath
 echo "Temporal path: $temppath"
 
 rawpath="$localpath/raw"
+# delete rawpath if it exists
+if [ -d "$rawpath" ]; then
+  rm -rf $rawpath
+fi
 mkdir -p $rawpath
 echo "Raw path: $rawpath"
 

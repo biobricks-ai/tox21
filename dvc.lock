@@ -4,8 +4,8 @@ stages:
     cmd: stages/1_download.sh
     deps:
     - path: stages/1_download.sh
-      md5: 6b915f9a5fcd99ad1e13696d03a43b89
-      size: 823
+      md5: c38f0c7e6c435f83e7b3cb78c8907425
+      size: 746
     outs:
     - path: download
       md5: 29de49bdb129649458cdc18f2dbe8ffa.dir
@@ -23,8 +23,8 @@ stages:
       size: 1356620732
       nfiles: 80
     - path: stages/2_unzip.sh
-      md5: f319cd48366939ce1911cdccf319bff2
-      size: 629
+      md5: 00d0a5df5a54ae5679c58dc74e90c0d2
+      size: 585
     - path: temp
       md5: bf900b0ea1f22031946dc6ca8cd1b8c9.dir
       size: 2178
@@ -35,21 +35,26 @@ stages:
       size: 4363859761
       nfiles: 337
   build:
-    cmd: stages/3_build.sh
+    cmd: Rscript stages/3_write_brick.R
     deps:
     - path: raw
-      md5: b15a3e56b1ca8cb0a4bf0994257063b1.dir
-      size: 4363859761
-      nfiles: 337
-    - path: stages/3_build.sh
-      md5: 15b8bf31aa08dc4837acea93b7f44be9
-      size: 759
+      md5: 99e6f20ae90bb8aae651b7db6a848930.dir
+      size: 4367690317
+      nfiles: 431
+    - path: stages/3_write_brick.R
+      md5: 63a11a90a65e9a040af8f61b6bb785ce
+      size: 941
     - path: temp
       md5: bf900b0ea1f22031946dc6ca8cd1b8c9.dir
       size: 2178
       nfiles: 1
     outs:
-    - path: brick
-      md5: a9c3e95cded269aab6fdbf31ea5ffcb6.dir
-      size: 1512515496
-      nfiles: 154
+    - path: brick/tox21.parquet
+      md5: 5a6add5da448d3991a6fe5e5468b0c66
+      size: 33131971
+    - path: brick/tox21_aggregated.parquet
+      md5: 5a6add5da448d3991a6fe5e5468b0c66
+      size: 33131971
+    - path: brick/tox21lib.parquet
+      md5: ead8a85ec296d9f5365017b4b16441f4
+      size: 825475
