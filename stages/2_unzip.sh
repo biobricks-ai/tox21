@@ -30,6 +30,7 @@ for x in $rawpath/*/; do
   echo $x
   for y in $x*; do
     echo $y
+    y=$(realpath --relative-to="$localpath" "$y")
     z=$(printf %s "$y" | tr "-" "_")
     echo $z
     mv $y $z
