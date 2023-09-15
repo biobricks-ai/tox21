@@ -4,15 +4,17 @@ stages:
     cmd: stages/1_download.sh
     deps:
     - path: stages/1_download.sh
-      md5: c38f0c7e6c435f83e7b3cb78c8907425
-      size: 746
+      hash: md5
+      md5: 21d7c8651ef0ccb198be518e3f51b144
+      size: 930
     outs:
     - path: download
       md5: 29de49bdb129649458cdc18f2dbe8ffa.dir
       size: 1356620732
       nfiles: 80
     - path: temp
-      md5: bf900b0ea1f22031946dc6ca8cd1b8c9.dir
+      hash: md5
+      md5: 01a6bc69d09016a79132483c28820178.dir
       size: 2178
       nfiles: 1
   unzip:
@@ -23,38 +25,47 @@ stages:
       size: 1356620732
       nfiles: 80
     - path: stages/2_unzip.sh
-      md5: 00d0a5df5a54ae5679c58dc74e90c0d2
-      size: 585
+      hash: md5
+      md5: 21744884772e04c886330005ba7d04ad
+      size: 590
     - path: temp
-      md5: bf900b0ea1f22031946dc6ca8cd1b8c9.dir
+      hash: md5
+      md5: 01a6bc69d09016a79132483c28820178.dir
       size: 2178
       nfiles: 1
     outs:
     - path: raw
-      md5: b15a3e56b1ca8cb0a4bf0994257063b1.dir
+      hash: md5
+      md5: b88e20c8a879fa69030c9e8e427148dd.dir
       size: 4363859761
       nfiles: 337
   build:
     cmd: Rscript stages/3_write_brick.R
     deps:
     - path: raw
-      md5: 99e6f20ae90bb8aae651b7db6a848930.dir
-      size: 4367690317
-      nfiles: 431
+      hash: md5
+      md5: b88e20c8a879fa69030c9e8e427148dd.dir
+      size: 4363859761
+      nfiles: 337
     - path: stages/3_write_brick.R
-      md5: 63a11a90a65e9a040af8f61b6bb785ce
-      size: 941
+      hash: md5
+      md5: c5dbdeded250cf30b3af70cc436cb77f
+      size: 942
     - path: temp
-      md5: bf900b0ea1f22031946dc6ca8cd1b8c9.dir
+      hash: md5
+      md5: 01a6bc69d09016a79132483c28820178.dir
       size: 2178
       nfiles: 1
     outs:
     - path: brick/tox21.parquet
-      md5: 5a6add5da448d3991a6fe5e5468b0c66
-      size: 33131971
+      hash: md5
+      md5: 247348fd1254be594b21d202d514d55d
+      size: 1231260948
     - path: brick/tox21_aggregated.parquet
-      md5: 5a6add5da448d3991a6fe5e5468b0c66
-      size: 33131971
+      hash: md5
+      md5: 4de160eb524d30b610ed369d19776af8
+      size: 34091575
     - path: brick/tox21lib.parquet
-      md5: ead8a85ec296d9f5365017b4b16441f4
+      hash: md5
+      md5: 0f67d0d71773dfff4e9658334b1c8895
       size: 825475
