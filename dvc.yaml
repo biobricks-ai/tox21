@@ -8,7 +8,7 @@ stages:
     outs:
       - download
       - temp
-  unzip: 
+  unzip:
     cmd: stages/2_unzip.sh
     deps:
       - stages/2_unzip.sh
@@ -16,7 +16,7 @@ stages:
       - temp
     outs:
       - raw
-  build: 
+  build:
     cmd: Rscript stages/3_write_brick.R
     deps:
       - stages/3_write_brick.R
@@ -26,3 +26,12 @@ stages:
       - brick/tox21.parquet
       - brick/tox21_aggregated.parquet
       - brick/tox21lib.parquet
+  rml:
+    cmd: bash stages/4_rml.sh
+    deps:
+      - brick/
+      - stages/4_rml.sh
+      - tox21.rml.ttl
+      - morph-kgc.ini
+    outs:
+      - rdf/

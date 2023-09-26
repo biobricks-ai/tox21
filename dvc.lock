@@ -49,8 +49,8 @@ stages:
       nfiles: 337
     - path: stages/3_write_brick.R
       hash: md5
-      md5: c5dbdeded250cf30b3af70cc436cb77f
-      size: 942
+      md5: 1377f37bad12cec9d4a0e8afae48140d
+      size: 1159
     - path: temp
       hash: md5
       md5: 01a6bc69d09016a79132483c28820178.dir
@@ -59,13 +59,39 @@ stages:
     outs:
     - path: brick/tox21.parquet
       hash: md5
-      md5: 247348fd1254be594b21d202d514d55d
-      size: 1231260948
+      md5: 0eb67f9b2fc3b16aff313d8ea9cdc359
+      size: 1237116063
     - path: brick/tox21_aggregated.parquet
       hash: md5
       md5: 4de160eb524d30b610ed369d19776af8
       size: 34091575
     - path: brick/tox21lib.parquet
       hash: md5
-      md5: 0f67d0d71773dfff4e9658334b1c8895
+      md5: be3b8da4eebac921c7eca80177280e93
       size: 825475
+  rml:
+    cmd: bash stages/4_rml.sh
+    deps:
+    - path: brick/
+      hash: md5
+      md5: 268c1928221d9976b99ecaedc9edf48f.dir
+      size: 1272033113
+      nfiles: 3
+    - path: morph-kgc.ini
+      hash: md5
+      md5: 4db7b2ab3384fb468b716ddc7161a00d
+      size: 132
+    - path: stages/4_rml.sh
+      hash: md5
+      md5: 1a6f8e5e301c61b24fc3023ad970d2e8
+      size: 112
+    - path: tox21.rml.ttl
+      hash: md5
+      md5: 6279d0e422d2cb7a33ae813afe3611d3
+      size: 2121
+    outs:
+    - path: rdf/
+      hash: md5
+      md5: 7e612fd7f1b73c26ddf5a1a2caee495f.dir
+      size: 355139697
+      nfiles: 1

@@ -1,5 +1,12 @@
+.*
+!.editorconfig
+!.envrc
+!.github
+!.gitignore
+
 logs
 /download
 /temp
 /brick
 /raw
+/rdf

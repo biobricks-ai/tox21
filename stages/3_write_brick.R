@@ -20,4 +20,8 @@ rawfiles <- discard(rawfiles,~grepl("description",.x))
 rawtable <- map(rawfiles,~readr::read_tsv(.x))
 rawtable <- keep(rawtable,~nrow(.x)>0)
 rawmerge <- bind_rows(rawtable)
+rawmerge <- rawmerge %>%
+  mutate(PUBCHEM_CID = as.character(as.integer(PUBCHEM_CID)),
+         PUBCHEM_SID = as.character(as.integer(PUBCHEM_SID)),
+         SAMPLE_DATA_ID = as.character(as.integer(SAMPLE_DATA_ID)))
 arrow::write_parquet(rawmerge,"brick/tox21.parquet")
