@@ -81,30 +81,6 @@
         "type": "github"
       }
     },
-    "morph-kgc": {
-      "inputs": {
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "poetry2nix": "poetry2nix_2"
-      },
-      "locked": {
-        "lastModified": 1695678755,
-        "narHash": "sha256-x8Vw79qjOVtK5FPUe3q0vBUpbuPBPVZ/FEupiMN+6R4=",
-        "owner": "insilica",
-        "repo": "nix-morph-kgc",
-        "rev": "884a9570682288dbd770523f031fa38bdd38e4f9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "insilica",
-        "repo": "nix-morph-kgc",
-        "type": "github"
-      }
-    },
     "nix-github-actions": {
       "inputs": {
         "nixpkgs": [
@@ -175,37 +151,11 @@
         "type": "indirect"
       }
     },
-    "poetry2nix_2": {
-      "inputs": {
-        "flake-utils": [
-          "morph-kgc",
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "morph-kgc",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1674537260,
-        "narHash": "sha256-DTki81bWzHHRka0ZLayYS5La3t+npRVZvfDH8mx/Las=",
-        "owner": "nix-community",
-        "repo": "poetry2nix",
-        "rev": "a20e27e0555621d35de171270cd041631fc7cb23",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "poetry2nix",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "biobricks-R": "biobricks-R",
         "flake-utils": "flake-utils_2",
         "hdt-cpp": "hdt-cpp",
-        "morph-kgc": "morph-kgc",
         "nixpkgs": "nixpkgs_2"
       }
     },

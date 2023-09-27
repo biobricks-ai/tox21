@@ -1,0 +1,8 @@
+{:paths ["stages"]
+ :deps
+ {co.insilica/ontology {:git/url "https://github.com/insilica/clj-ontology.git"
+                        :git/sha "37aa3788e7ca579b5fd9be0522a06da2faaecb9a"}}
+ :aliases
+ {:rdf
+  {:main-opts ["-m" "rml"]
+   :jvm-opts ["-Xms600m" "-Xmx9600m"]}}}

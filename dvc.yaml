@@ -30,8 +30,8 @@ stages:
     cmd: bash stages/4_rml.sh
     deps:
       - brick/
+      - deps.edn
       - stages/4_rml.sh
-      - tox21.rml.ttl
-      - morph-kgc.ini
+      - stages/rml.clj
     outs:
       - rdf/

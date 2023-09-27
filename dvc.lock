@@ -77,21 +77,21 @@ stages:
       md5: 268c1928221d9976b99ecaedc9edf48f.dir
       size: 1272033113
       nfiles: 3
-    - path: morph-kgc.ini
+    - path: deps.edn
       hash: md5
-      md5: 4db7b2ab3384fb468b716ddc7161a00d
-      size: 132
+      md5: f6373a4d8bf398b6b30fd237eba1a82a
+      size: 269
     - path: stages/4_rml.sh
       hash: md5
-      md5: 1a6f8e5e301c61b24fc3023ad970d2e8
-      size: 112
-    - path: tox21.rml.ttl
+      md5: eeb4ad8a5e8632f32197111263ad9c8e
+      size: 116
+    - path: stages/rml.clj
       hash: md5
-      md5: 6279d0e422d2cb7a33ae813afe3611d3
-      size: 2121
+      md5: 4be9817074d4890258bd37d925be03a9
+      size: 6080
     outs:
     - path: rdf/
       hash: md5
-      md5: 7e612fd7f1b73c26ddf5a1a2caee495f.dir
-      size: 355139697
+      md5: 27ae0fa7d2afc7802d92e73f3ddb670a.dir
+      size: 1863223028
       nfiles: 1
