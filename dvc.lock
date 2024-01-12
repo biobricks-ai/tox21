@@ -49,8 +49,8 @@ stages:
       nfiles: 337
     - path: stages/3_write_brick.R
       hash: md5
-      md5: 1377f37bad12cec9d4a0e8afae48140d
-      size: 1159
+      md5: 277fc38c86016f360e3c31d0d73cbf06
+      size: 1457
     - path: temp
       hash: md5
       md5: 01a6bc69d09016a79132483c28820178.dir
@@ -63,19 +63,19 @@ stages:
       size: 1237116063
     - path: brick/tox21_aggregated.parquet
       hash: md5
-      md5: 4de160eb524d30b610ed369d19776af8
-      size: 34091575
+      md5: 22fc9a6ba07128159a6c33f86e242bf1
+      size: 34130359
     - path: brick/tox21lib.parquet
       hash: md5
-      md5: be3b8da4eebac921c7eca80177280e93
-      size: 825475
+      md5: 7444499583a6a70de0fe9fd96e304801
+      size: 845800
   rml:
     cmd: bash stages/4_rml.sh
     deps:
     - path: brick/
       hash: md5
-      md5: 268c1928221d9976b99ecaedc9edf48f.dir
-      size: 1272033113
+      md5: a8fbfe1fd4958f1209207effd5c5bb89.dir
+      size: 1272092222
       nfiles: 3
     - path: deps.edn
       hash: md5
@@ -92,6 +92,6 @@ stages:
     outs:
     - path: rdf/
       hash: md5
-      md5: 27ae0fa7d2afc7802d92e73f3ddb670a.dir
-      size: 1863223028
+      md5: 415bac7f49f7a6476ca3ad01582b1a52.dir
+      size: 1863333970
       nfiles: 1
